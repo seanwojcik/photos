@@ -18,15 +18,25 @@
     <body>
         {{ content }}
         <div class="container">
-            {% for album in site.data.albums %}
-            <div class="album-wrapper col-3">
-                <div class="cover-image" style="background-image: url({{ album.cover_image }})"></div>
-                <div class="album-info">
-                    <div class="album-title"><a target="_blank" href="{{ album.url }}">{{ album.title }}</a></div>
-                    <div class="album-date">{{ album.date | date: '%b %d' }}</div>
+            <div class="row">
+                {% for album in site.data.albums %}
+                <div class="col-3">
+                    <div class="album-wrapper">
+                        <div class="album">
+                            <a target="_blank" href="{{ album.url }}">
+                                <div class="cover-image" style="background-image: url({{ album.cover_image }})"></div>
+                            </a>
+                            <div class="album-info">
+                                <div class="album-title">
+                                    <a target="_blank" href="{{ album.url }}">{{ album.title }}</a>
+                                </div>
+                                <div class="album-date">{{ album.date | date: '%b %d' }}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </body>
 </html>

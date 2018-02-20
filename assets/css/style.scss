@@ -17,16 +17,23 @@ a:link, a:visited, a:hover, a:active {
 }
 
 div.album-wrapper {
-    div.cover-image {
-        background-size: cover;
-        background-position: center center;
+    border: 1px solid #444;
+    display: inline-block;
+    box-shadow: 3px 3px 1px #F0F0F0;
+    margin: 10px;
+    div.album {
         width: 200px;
-        height: 200px;
-        display: block;
-    }
-    div.album-title {
-    }
-    div.album-date {
-        font-weight: 300;
+        margin: 15px;
+        div.cover-image {
+            background-size: cover;
+            background-position: center center;
+            width: 200px;
+            height: 200px;
+        }
+        div.album-title {
+        }
+        div.album-date {
+            font-weight: 300;
+        }
     }
 }
