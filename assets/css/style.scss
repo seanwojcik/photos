@@ -1,0 +1,27 @@
+---
+---
+
+$body-font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$link-color: #005689;
+$card-color: #ffffff;
+
+body {
+    //font-family: $body-font;
+    color: #000000;
+    font-size: 13px;
+
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: $link-color;
+}
+
+div.album-wrapper {
+    div.cover-image {
+        background-size: cover;
+        background-position: center center;
+        width: 200px;
+        height: 200px;
+        display: block;
+    }
+}

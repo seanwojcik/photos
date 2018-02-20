@@ -15,13 +15,16 @@
     </head>
     <body>
         {{ content }}
-        {% for album in site.data.albums %}
-        <p>
-            Title: {{ album.title }}<br />
-            ({{ album.date | date: '%b %d' }})
-        </p>
-        <p>Link: <a target="_blank" href="{{ album.url }}">Right here</a></p>
-        <img src="{{ album.cover_image }}" />
+        <div class="container">
+            {% for album in site.data.albums %}
+            <div class="album-wrapper col-3">
+                <div class="cover-image" style="background-image: url({{ album.cover_image }})"></div>
+                <div class="album-info">
+                    <div><a target="_blank" href="{{ album.url }}">{{ album.title }}</a></div>
+                    <div>{{ album.date | date: '%b %d' }}</div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </body>
 </html>
