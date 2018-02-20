@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Title-->
+        <title>{{ site.name }}</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ "assets/css/style.css" | relativize_url }}">
+    </head>
+    <body>
+        {{ content }}
+        {% for album in site.data.albums %}
+        <p>
+            Title: {{ album.title }}<br />
+            ({{ album.date | date: '%b %d' }})
+        </p>
+        <p>Link: <a target="_blank" href="{{ album.url }}">Right here</a></p>
+        <img src="{{ album.cover_image }}" />
+        {% endfor %}
+    </body>
+</html>
