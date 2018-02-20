@@ -2,7 +2,7 @@
 ---
 
 $body-font: "Roboto", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$link-color: #005689;
+$link-color: #000000;
 $card-color: #ffffff;
 
 body {
@@ -17,10 +17,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 div.album-wrapper {
-    border: 1px solid #444;
+    border: 1px solid #BBBBBB;
     display: inline-block;
     box-shadow: 3px 3px 1px #F0F0F0;
     margin: 10px;
+    background-color: $card-color;
     div.album {
         width: 200px;
         margin: 15px;
