@@ -1,12 +1,12 @@
 ---
 ---
 
-$body-font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font: "Roboto", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $link-color: #005689;
 $card-color: #ffffff;
 
 body {
-    //font-family: $body-font;
+    font-family: $body-font;
     color: #000000;
     font-size: 13px;
 
@@ -23,5 +23,10 @@ div.album-wrapper {
         width: 200px;
         height: 200px;
         display: block;
+    }
+    div.album-title {
+    }
+    div.album-date {
+        font-weight: 300;
     }
 }

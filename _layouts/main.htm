@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
 
         <!-- Custom CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
         <link rel="stylesheet" href="{{ "assets/css/style.css" | relativize_url }}">
     </head>
     <body>
@@ -20,8 +22,8 @@
             <div class="album-wrapper col-3">
                 <div class="cover-image" style="background-image: url({{ album.cover_image }})"></div>
                 <div class="album-info">
-                    <div><a target="_blank" href="{{ album.url }}">{{ album.title }}</a></div>
-                    <div>{{ album.date | date: '%b %d' }}</div>
+                    <div class="album-title"><a target="_blank" href="{{ album.url }}">{{ album.title }}</a></div>
+                    <div class="album-date">{{ album.date | date: '%b %d' }}</div>
                 </div>
             </div>
         </div>
