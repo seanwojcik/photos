@@ -28,19 +28,17 @@
                     <div class="row">
                         {% for album in site.data.albums %}
                         <div class="col-lg-3 col-md-4 col-sm-6 album-entry">
-                            <div class="album-wrapper">
+                            <div class="album-wrapper"><a target="_blank" href="{{ album.url }}">
                                 <div class="album">
-                                    <a target="_blank" href="{{ album.url }}">
                                         <div class="cover-image" style="background-image: url({{ album.cover_image }})"></div>
-                                    </a>
                                     <div class="album-info">
                                         <div class="album-title">
-                                            <a target="_blank" href="{{ album.url }}">{{ album.title }}</a>
+                                            {{ album.title }}
                                         </div>
                                         <div class="album-date">{{ album.date | date: "%B %-d, %Y" }}</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
                         {% endfor %}
                     </div>
