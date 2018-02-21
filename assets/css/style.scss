@@ -4,22 +4,47 @@
 $body-font: "Roboto", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $link-color: #000000;
 $card-color: #ffffff;
+$banner-image: "https://lh3.googleusercontent.com/RW0MWcevBvZZ0q0FyfMQMW83ysp1wk4wjZTIkfWuIzosk6I4nvcQPzh2AjgRFKg3TuxRUul892uBD3SSmip4bFum4cg_ySm_ZUtrRI6KDwp4tI134FZpFWFmFfJGlOp4oDUU2BfAWROKqGid7IQXt2GxBa_ZY1AfaqE7g8vFsCnGrxO0B0lJmVJjNQffK8rYdA8phCt_McNDIkREsGqay1-kSV9a6MowNGszlAqMtqivi6q_I7GTkppnV8fbJZuZjCH_HXOh0qGkS2xTdTKkY9YUNcLMoUBFBRyxvoLMfWVz3Q5xymkSjutql1GGeBec9hJp_iiMnEPAEWqIAtXrVzpd_GWdYQXDY_3Ckl-P6lF9KpwrvEKs8GIGBnaSk-aLWiRakHsGEvvGN8zI0WXLV2qkz9IxVjCz_M0ZGBRcYFai_JBM16Ds_qUZG62v0HQW6YBpcUzxmXMoxte1LcZU3JCye9TwLNyH8OR7BasKM-GaoW5zArR_2BuV8NuBhbypOrTO120-0VQdJid3NKAdTgoGiGzt3JyjgSdzq9NfE9O4zM-0hdsz0pIB_RVUyF59EEqv1FlbVtDW5HYeG4uq9-lHLcQwqqgBCUTKLZI=w2156-h1438-no";
 
 body {
     font-family: $body-font;
     color: #000000;
     font-size: 13px;
-
+    background: #ffffff;
 }
 
 a:link, a:visited, a:hover, a:active {
     color: $link-color;
 }
 
+div.content-wrapper {
+    margin: 15px;
+    box-shadow: 0px 0px 10px #000000;
+    div.head-section {
+        div.banner {
+            height: 300px;
+            background-image: url($banner-image);
+            background-position: center center;
+            background-size: cover;
+            h1 {
+                font-size: 72px;
+                text-align: center;
+                line-height: 300px;
+                color: #ffffff;
+                font-weight: 300;
+                background-color: rgba(0,0,0,0.25);
+            }
+        }
+    }
+    div.content-section {
+    }
+}
+
+div.album-wrapper:hover {
+    box-shadow: 0px 0px 10px #333333;
+}
 div.album-wrapper {
-    border: 1px solid #BBBBBB;
     display: inline-block;
-    box-shadow: 3px 3px 1px #F0F0F0;
     margin: 10px;
     background-color: $card-color;
     div.album {
