@@ -25,6 +25,7 @@
             </div>
             <div class="content-section">
                 <div class="container-fluid">
+                    {% include return-strip.htm %}
                     <div class="row">
                         {% for album in site.data.albums %}
                         <div class="col-lg-3 col-md-4 col-sm-6 album-entry">
@@ -42,6 +43,7 @@
                         </div>
                         {% endfor %}
                     </div>
+                    {% include return-strip.htm %}
                 </div>
             </div>
         </div>
